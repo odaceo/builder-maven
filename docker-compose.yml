@@ -8,5 +8,5 @@ services:
       dockerfile: ../Dockerfile
       args:
         JAVA_VERSION: 8-ubuntu18
-        MAVEN_VERSION: 3.5.3
+        MAVEN_VERSION: '3.5'
     image: odaceo/maven:3.5-java8-ubuntu18

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Downloading Maven
-curl -fsSL -o /tmp/apache-maven.tar.gz https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
+# Update your local package index
+apt-get update
 
-# Installing Maven
-mkdir -p /usr/share/maven
-tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1
-rm -f /tmp/apache-maven.tar.gz
-ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+# Install PIP package
+apt-get install -y maven=${MAVEN_VERSION}.*
+
+# Remove the local package index
+rm -rf /var/lib/apt/lists/*
 
 # Print the installed Gradle version
 mvn --version
