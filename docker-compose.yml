@@ -2,11 +2,11 @@ version: '3'
 
 services:
 
-  3.5-java8-ubuntu18:
+  3.6-java8-ubuntu18:
     build:
       context: ./ubuntu-18
       dockerfile: ../Dockerfile
       args:
         JAVA_VERSION: 8-ubuntu18
-        MAVEN_VERSION: '3.5'
-    image: odaceo/maven:3.5-java8-ubuntu18
+        MAVEN_VERSION: '3.6'
+    image: odaceo/maven:3.6-java8-ubuntu18
